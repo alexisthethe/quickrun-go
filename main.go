@@ -11,25 +11,14 @@ func main() {
 
 	var taskDishes = "Do the dishes"
 	var taskLaundry = "Finish the laundry"
-	taskCarrots := "Buy 3 carrots"
+	var taskCarrots = "Buy 3 carrots"
+
+	var taskItems = []string {taskDishes, taskLaundry, taskCarrots}
 
 	fmt.Println()
 	fmt.Println("All tasks:")
-	fmt.Println("- " + taskDishes)
-	fmt.Println("- " + taskLaundry)
-	fmt.Println("- " + taskCarrots)
-
-	fmt.Println()
-	fmt.Println("Priority:")
-	fmt.Println("- " + taskDishes)
-
-	fmt.Println()
-	fmt.Println("Home work:")
-	fmt.Println("- " + taskDishes)
-	fmt.Println("- " + taskLaundry)
-
-	fmt.Println()
-	fmt.Println("Groceries:")
-	fmt.Println("- " + taskCarrots)
+	for index, task := range taskItems {
+		fmt.Printf("%d) %s\n", index + 1, task)
+	}
 
 }
