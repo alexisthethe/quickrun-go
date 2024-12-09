@@ -2,10 +2,15 @@ package main
 
 import (
 	"fmt"
-
-	"rsc.io/quote"
 )
 
 func main() {
-	fmt.Println(quote.Go())
+	fmt.Println("#######################")
+	fmt.Println("#### My TODO List! ####")
+	fmt.Println("#######################")
+	fmt.Println()
+	fmt.Println("1. Do the dishes")
+	fmt.Println("2. Finish the laundry")
+	fmt.Println("3. Clean the house")
+
 }
