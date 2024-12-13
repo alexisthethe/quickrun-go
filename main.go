@@ -8,12 +8,13 @@ import (
 var taskItems = []string{"Do the laundry", "Clean the house", "Buy groceries"}
 
 func main() {
-	fmt.Println("Running the TODO List App ...")
+	var port string = "8080"
+	fmt.Printf("Running the TODO List App on http://localhost:%s ...\n", port)
 
 	http.HandleFunc("/", welcomePage)
 	http.HandleFunc("/list_tasks", listTasks)
 
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":" + port, nil)
 }
 
 func welcomePage(writer http.ResponseWriter, request *http.Request) {
